@@ -1,7 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
-const GameOverScrren = props => {
+export interface GameOverScrren {
+    roundsNumber: number;
+    userNumber: number | undefined;
+    onReset: any;
+}
+
+const GameOverScrren = (props: GameOverScrren) => {
     return (
         <View style={styles.screen}>
             <Text>The Game is over</Text>
